@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hashbrowns</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        
+        <script src="js/p5.js"></script>
+        <script src="js/hash.js"></script>
+        <script src="js/generatePassword.js"></script>
+        <script src="js/hashes.js"></script>
+        <script src="js/whirlpool.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery.slicknav.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:'#mobileMenu', label:'"HASHBROWNS"'});
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav id="mobileMenu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <h1 id="title"><a id="titleA" href="index.html">"HASHBROWNS"</a></h1>
+                <li id="hashAlg">
+                    <a href="#" id="hashDrop">Hashing Algorithms
+                        <i class="down"></i>
+                    </a>
+                    <ul id="algMenu">
+                        <li id="md5"><a href="#" onClick="updateSHA256()">SHA-256</a></li>
+                        <li id="sha1"><a href="#" onClick="updateMD5()">MD5</a></li>
+                        <li id="sha2"><a href="#" onClick="updateRIPEMD()">RIPEMD-160</a></li>
+                        <li id="sha3"><a href="#" onClick="updateWHIRLPOOL()">WHIRLPOOL</a></li>
+                    </ul>
+                </li>
+                <li id="generate">
+                    <a href="#">Generate Random Password
+                        <i class="down"></i>
+                    </a>
+                    <ul id="randPassMenu">
+                        <li id="weak"><a href="#" onClick="weakPassword()">Weak Password</a></li>
+                        <li id="medium"><a href="#" onClick="mediumPassword()">Medium Password</a></li>
+                        <li id="strong"><a href="#" onClick="strongPassword()">Strong Password</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <main>
+            <i class="up"></i>
+            <h1 id="enterPass">Enter a Password!</h1>
+            <input type="text" name="password" id="password" minlength="8" maxlength="35"  placeholder="INPUT 8 TO 35 CHARACTERS">
+            <button type="button" id="hashButton" class="blink" onClick="hashIt()">CHOOSE AN ALGORITHM!</button>
+            
+            <p id="yourPassword">YOUR PASSWORD:</p>
+            <p id="plainPassword"></p>
+
+            <p id="yourHashedPassword">HASHED PASSWORD:</p>
+            <p id="hashedPassword"></p>
+
+            <p id="bruteAttackInfo">TIME IT TAKES YOUR BROWSER TO EXECUTE A BRUTE FORCE ATTACK:</p>
+            <p id="attackTime"></p>
+            
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

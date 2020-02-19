@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+body nav {
+    background-color: darkkhaki;
+    padding: .5em 0;
+}
+
+i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#title {
+    float: left;
+    font-size: 120%;
+    margin: .4em 1em 0 1.5em;
+}
+
+#title:hover {
+    cursor: pointer;
+}
+
+#titleA {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+#nav_menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav_menu ul li a {
+    display: block;
+    text-decoration: none;
+    background-color: darkkhaki;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: .5em 0;
+    font-weight: bold;
+}
+
+#nav_menu ul li a:hover {
+    color: black;
+}
+
+#md5, #weak {
+    margin-top: .6em;
+    border-top: 1px solid darkkhaki;
+    border-radius: 3px;
+}
+
+#sha3, #strong {
+    border-bottom: 1px solid darkkhaki;
+    border-radius: 3px;
+}
+
+#hashButton {
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    border: 2px solid #6081FF;
+    height: 50px;
+    width: 150px;
+    padding: .1em;
+    border-radius: 10px;
+    background-color: #6081FF;
+    margin-top: 1.5em;
+    cursor: pointer;
+    display: block;
+    margin: 1.5em auto 0 auto;
+}
+
+#hashButton:hover {
+    color: black !important;
+    cursor: pointer;
+}
+
+#mobileMenu {
+    display: none;
+}
+
+#password, main h1 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+main > h1 {
+    margin-top: 1.5em;
+    font-weight: bolder;
+    font-size: 250%;
+}
+
+#password {
+    margin-top: 1.5em;
+    width: 30em;
+    height: 2em;
+    font-size: 150%;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+#yourPassword {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+#plainPassword {
+    margin-bottom: 4em;
+    font-weight: bold;
+}
+
+#yourHashedPassword {
+    font-size: 150%;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+#bruteAttackInfo {
+    font-size: 150%;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+#hashedPassword {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1245px) {
+    #title, #hashAlg, #question {
+        padding-top: .5em;
+    }
+}
+
+@media only screen and (max-width: 1003px) {
+    #nav_menu {
+        display: none;
+    }
+    
+    #mobileMenu {
+        display: block;
+    }
+    
+    .slicknav_menu {
+        background-color: darkkhaki !important;
+        padding: 0 !important;
+    }
+    
+    i {
+        display: none;
+    }
+    
+    h1 {
+        display: none;
+    }
+    
+    #password {
+        width: 70%;
+    }
+    
+    aside, section {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    aside {
+        margin-bottom: 3em;
+    }
+    
+    p {
+        padding: 2em;
+        margin: 0;
+    }
+    
+    #hashedPassword, #plainPassword {
+        padding: 2em;
+        margin: 0;
+    }
+    
+    #hashPass {
+        margin-top: 3em;
+    }
+}
